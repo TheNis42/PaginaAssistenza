@@ -1,0 +1,24 @@
+#tabellaResponsiva{height: 80vh; overflow-y: auto; width: 75vw; margin: auto; margin-top: 30px; }
+#tabellaResponsiva table th{border:1px solid black; border-left:0; background-color: #ababff}
+#tabellaResponsiva table{  border-spacing: 0; border-top:0;border-right:0; margin: auto;
+}
+#tabellaResponsiva table td{border-right: 0.5px solid black; max-width: 150px; overflow: clip ; white-space: nowrap;   text-overflow: ellipsis; height: 28px}
+#tabellaResponsiva table thead{position: sticky; top: 0;}
+
+.c1 .tabMacchina {background-color: #ffffff}
+.c2 .tabMacchina{background-color: #f0f0f0}
+#tabellaResponsiva table thead .tabMacchina{background-color: #ababff}
+
+.c1 .tabCliente {background-color: #ffffff}
+.c2 .tabCliente{background-color: #f0f0f0}
+#tabellaResponsiva table thead .tabCliente{background-color: #ababff}
+
+.c1 .tabContratto {background-color: #ffffff}
+.c2 .tabContratto{background-color: #f0f0f0}
+#tabellaResponsiva table thead .tabContratto{background-color: #ababff}
+a{text-decoration: none; color: black}
+a:hover{text-decoration: underline}
+
+.c1 {background-color: #ffffff}
+.c2 {background-color: #f0f0f0}
+#modifica{border: 0px; background-color: transparent}

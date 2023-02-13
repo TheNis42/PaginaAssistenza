@@ -1,0 +1,29 @@
+input[type=text] {
+    width: 200px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('lente.png');
+    background-size: 25px 25px ;
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 20%;
+}
+#bott {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ababff;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
