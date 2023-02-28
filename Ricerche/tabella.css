@@ -1,24 +1,25 @@
-#tabellaResponsiva{height: 80vh; overflow-y: auto; width: 75vw; margin: auto; margin-top: 30px; }
-#tabellaResponsiva table th{border:1px solid black; border-left:0; background-color: #ababff}
-#tabellaResponsiva table{  border-spacing: 0; border-top:0;border-right:0; margin: auto;
+#tabellaResponsiva{height: 75vh; overflow: auto; width: fit-content;max-width: 100vw; margin: auto; margin-top: 30px; z-index: 0 }
+#tabellaResponsiva table th{font-family: Verdana; font-size: 13.5px; border:1px solid black; border-left:0; background-color: #ababff; padding: 7px;}
+#tabellaResponsiva table{border: 1px solid black; border-spacing: 0; border-top:0;border-right:0; margin: auto;
 }
-#tabellaResponsiva table td{border-right: 0.5px solid black; max-width: 150px; overflow: clip ; white-space: nowrap;   text-overflow: ellipsis; height: 28px}
-#tabellaResponsiva table thead{position: sticky; top: 0;}
+#tabellaResponsiva table td{border-right: 1px solid black; max-width: 180px; overflow: clip ; white-space: nowrap;   text-overflow: ellipsis; height: 28px; padding: 7px}
+#tabellaResponsiva table td:active{text-overflow: inherit; height: fit-content; white-space: break-spaces; background-color: yellow}
+#tabellaResponsiva table thead{position: sticky; top: 0;  z-index: 2}
+#tabellaResponsiva table tbody{position: relative; z-index: 1; border: 1px solid black}
 
-.c1 .tabMacchina {background-color: #ffffff}
-.c2 .tabMacchina{background-color: #f0f0f0}
-#tabellaResponsiva table thead .tabMacchina{background-color: #ababff}
 
-.c1 .tabCliente {background-color: #ffffff}
-.c2 .tabCliente{background-color: #f0f0f0}
-#tabellaResponsiva table thead .tabCliente{background-color: #ababff}
 
-.c1 .tabContratto {background-color: #ffffff}
-.c2 .tabContratto{background-color: #f0f0f0}
-#tabellaResponsiva table thead .tabContratto{background-color: #ababff}
+
+.spunta{text-align: center}
+
 a{text-decoration: none; color: black}
 a:hover{text-decoration: underline}
 
 .c1 {background-color: #ffffff}
 .c2 {background-color: #f0f0f0}
-#modifica{border: 0px; background-color: transparent}
+#tabellaResponsiva table thead th{ background-color: #fffc54; color: #00116b
+}
+#modifica{ background-color: white; position: static; z-index: 2}
+td img{width: 40px;}
+td img:hover{cursor:pointer}
+

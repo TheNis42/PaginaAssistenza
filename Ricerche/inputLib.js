@@ -1,13 +1,14 @@
- function getInputs(dati,filePath,IDhtml)
+start=Date.now()
+function getInputs(dati,filePath,IDhtml)
  {$(document).ready(function ()
 {
     load_data();
 function load_data()
-{    var datas={};
+{
+
+    var datas={};
     dati.forEach(element => {
-        console.log(element.nome)
-    datas[element.nome]=element.valore});
-    console.log("dio")
+        datas[element.nome]=element.valore});
     $.ajax({
         url:filePath,
         method:"get",
@@ -16,22 +17,31 @@ function load_data()
         {
             $(IDhtml).html(data);
         }
-    });
+   });
+
 }
 
 function getTextInput(textObj, priority=0)
 {
-    $(textObj.htmlID).keyup(function(){
+
+
+    $(textObj.htmlID).on('keyup paste change',function(){
         let search = $(this).val();
+        console.log('js: '+search);
         search=search!=''?search+'%':undefined;
         textObj.valore=search
         priorita=priority
         dati['percPag.valore']=1
-        load_data();
+        load_data()
+        setTimeout(function (){ if(Date.now()-start>=800)
+                                            load_data()
+            },800)
+        start=Date.now();
+
     });
 }
 function getDateInput(dateObj, priority=0)
-{	$(dateObj.htmlID).mouseleave(function(){
+{	$(dateObj.htmlID).change(function(){
     let search = $(this).val();
     search=search!=''?search:undefined;
     dateObj.valore=search

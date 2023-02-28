@@ -4,13 +4,15 @@ var dati=
         cliente={valore:undefined, htmlID: '#clienti', nome:'customer', tipo: 1},
         codMacchina={valore:undefined, htmlID: '#macchine', nome:'codMac', tipo: 1},
         ModelloMacchina={valore:undefined, htmlID: '#modello', nome:'ModMacc', tipo: 1},
-        priorita={valore:1, undefined:'priority', tipo: 0},
+        priorita={valore:1, undefined:'priority', tipo: 0}
     ]
 
-var isExternal=false
 if(typeof extCodMac!=='undefined')
-{dati[3].valore=extCodMac}
-
+{dati[3].valore=extCodMac
+}
+if(typeof extCliente!=='undefined')
+{dati[2].valore=extCliente
+}
     getInputs(dati,'fetch.php','#tabellaResponsiva');
 
 function modificaGaranzia(Codice)

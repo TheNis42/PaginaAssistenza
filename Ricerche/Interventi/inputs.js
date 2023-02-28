@@ -13,13 +13,7 @@ var isExternal=false
 if(typeof extCodMac!=='undefined')
 {dati[3].valore=extCodMac}
 */
-$.ajax({
-    type: "GET",
-    url: "./index.php",
-    success: function (result) {
-        console.log(result);
-    },
-});
+
 
 
 getInputs(dati,'fetch.php','#tabellaResponsiva');
