@@ -12,7 +12,7 @@ $maxRows=0;
 $priorita=(isset($_GET["priority"])? $_GET["priority"] : 0);
 //$priorities = ['T_Macchine.Codice', 'Q_Clienti.Ragione_Sociale', 'T_DettContratti.ID'];
 
-$query = "SELECT TOP (100*$perc) 
+$query = "SELECT TOP 50 
         T_TestChiam.ID, CONVERT(varchar,T_TestChiam.DataChiusura,103) as DataChiusura,T_TestChiam.Flag_chiusura,T_TestChiam.CodChiamata AS codice, CONVERT(varchar,T_TestChiam.DataChiamata,103) AS chiam , T_Macchine.Codice, T_TestChiam.Colore,T_TestChiam.Ncopie,T_TestChiam.CodDifetto,T_TestChiam.DescDifetto,T_TestChiam.CodOsserv,
         T_TestChiam.Note,T_Operatori.Descrizione AS Operatori,T_TempiLav.Minuti AS Tempo, T_TipoCont.Descrizione, T_TestChiam.Promemoria, Q_Clienti.Ragione_Sociale
         FROM T_TestChiam

@@ -7,8 +7,8 @@ $perc=(isset($_GET["perc"])? $_GET["perc"] : 1);
 $dInizio=(isset($_GET["dataI"]) && $_GET["dataI"]!=''? "AND T_DettContratti.DataFine>=CONVERT(datetime,'".$_GET['dataI']."',120)" : '');
 $dFine=(isset($_GET["dataF"]) && $_GET["dataF"]!=''? "AND T_DettContratti.DataFine<=CONVERT(datetime,'".$_GET['dataF']."',120)"  : '');
 
-$cliente=(isset($_GET["customer"])? $_GET["customer"] : '%');
-$contratti=(isset($_GET["contratti"])? $_GET["contratti"] : '%');
+$cliente=(isset($_GET["customer"])? $_GET["customer"].'%' : '%');
+$contratti=(isset($_GET["contratti"])? $_GET["contratti"].'%' : '%');
 $codMacchina=(isset($_GET["codMac"])? $_GET["codMac"] : '%');
 $maxRows=0;
 $priorita=(isset($_GET["priority"])? $_GET["priority"] : 0);

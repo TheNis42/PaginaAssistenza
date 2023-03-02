@@ -5,9 +5,9 @@ $wConnect = connetti(true);
 $output = '';
 $perc=(isset($_GET["perc"])? $_GET["perc"] : 1);
 
-$cliente=(isset($_GET["customer"])? $_GET["customer"] : '%');
-$contratti=(isset($_GET["contratti"])? $_GET["contratti"] : '%');
-$ModelloMacchina=(isset($_GET["ModMacc"])? $_GET["ModMacc"] : '%');
+$cliente=(isset($_GET["customer"])? $_GET["customer"].'%' : '%');
+$contratti=(isset($_GET["contratti"])? $_GET["contratti"].'%' : '%');
+$ModelloMacchina=(isset($_GET["ModMacc"])? $_GET["ModMacc"].'%' : '%');
 $codMacchina=(isset($_GET["codMac"])? $_GET["codMac"]  : '%');
 
 $maxRows=0;

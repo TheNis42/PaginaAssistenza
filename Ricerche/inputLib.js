@@ -25,18 +25,14 @@ function getTextInput(textObj, priority=0)
 {
 
 
-    $(textObj.htmlID).on('keyup paste change',function(){
+    $(textObj.htmlID).on('keyup paste change mouseleave mouseenter focus',function(){
         let search = $(this).val();
         console.log('js: '+search);
-        search=search!=''?search+'%':undefined;
+        search=search!=''?search:undefined;
         textObj.valore=search
         priorita=priority
         dati['percPag.valore']=1
         load_data()
-        setTimeout(function (){ if(Date.now()-start>=800)
-                                            load_data()
-            },800)
-        start=Date.now();
 
     });
 }
